@@ -1,6 +1,6 @@
 %define name	texworks
 %define version	0.2.3
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary:	A simple interface for working with TeX documents
 Name:		%{name}
