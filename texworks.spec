@@ -1,18 +1,20 @@
 %define name	texworks
-%define version	0.2.3
-%define release %mkrel 3
+%define version	0.4.0
+%define rel	r759
+%define release %mkrel 0.%{rel}
 
 Summary:	A simple interface for working with TeX documents
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
-Source0:	%{name}-%{version}.tar.gz
+Source0:	%{name}-%{version}-%{rel}.tar.gz
+Source1:	TeXworks.pro
 License:	GPLv2
 Group:		Publishing
 Url:		http://texworks.googlecode.com/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	qt4-devel, libpoppler-devel, libpoppler-qt4-devel
-BuildRequires:	hunspell-devel, dbus-devel
+BuildRequires:	qt4-devel >= 4.5.2, libpoppler-devel, libpoppler-qt4-devel
+BuildRequires:	hunspell-devel >= 1.2.8, dbus-devel
 
 %description
 TeXworks is an environment for authoring TeX (LaTeX, ConTeXt, etc)
@@ -28,7 +30,8 @@ easy-to-use environment for users on other platforms, especially
 GNU/Linux and Windows.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}
+cp -f %SOURCE1 .
 
 %build
 %qmake_qt4
@@ -36,13 +39,18 @@ GNU/Linux and Windows.
 
 %install
 %__rm -rf %{buildroot}
-%__install -D -m 755 texworks %{buildroot}%{_bindir}/texworks
+export INSTALL_ROOT=%{buildroot}
+%makeinstall 
+
+mv -f manual/en html
 
 %clean
 %__rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc README COPYING
-%_bindir/*
-
+%doc NEWS README COPYING html/
+%_bindir/texworks
+%_mandir/man1/texworks.*
+%_datadir/applications/texworks.desktop
+%_datadir/pixmaps/TeXworks.png
