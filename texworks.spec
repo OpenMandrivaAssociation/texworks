@@ -1,6 +1,6 @@
 %define name	texworks
-%define version	0.4.1
-%define rel	r829
+%define version	0.4.3
+%define rel	r858
 %define release %mkrel 0.%{rel}
 
 Summary:	A simple interface for working with TeX documents
