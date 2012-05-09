@@ -1,7 +1,7 @@
 %define name	texworks
-%define version	0.4.3
-%define rel	r858
-%define release %mkrel 0.%{rel}
+%define version	0.4.4
+%define rel		r1004
+%define release 0.%{rel}
 
 Summary:	A simple interface for working with TeX documents
 Name:		%{name}
@@ -13,7 +13,8 @@ License:	GPLv2
 Group:		Publishing
 Url:		http://texworks.googlecode.com/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	qt4-devel >= 4.5.2, libpoppler-devel, libpoppler-qt4-devel
+BuildRequires:	qt4-devel >= 4.5.2
+BuildRequires:  libpoppler-devel >= 0.16, libpoppler-qt4-devel >= 0.16
 BuildRequires:	hunspell-devel >= 1.2.8, dbus-devel
 
 %description
