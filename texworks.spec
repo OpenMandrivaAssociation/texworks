@@ -55,3 +55,34 @@ mv -f manual/en html
 %_mandir/man1/texworks.*
 %_datadir/applications/texworks.desktop
 %_datadir/pixmaps/TeXworks.png
+
+
+%changelog
+* Thu May 10 2012 Lev Givon <lev@mandriva.org> 0.4.4-0.r1004
++ Revision: 797856
+- Update to 0.4.4.
+
+* Thu Jul 21 2011 Lev Givon <lev@mandriva.org> 0.4.3-0.r858
++ Revision: 690840
+- Update to 0.4.3.
+
+* Tue May 31 2011 Lev Givon <lev@mandriva.org> 0.4.1-0.r829
++ Revision: 682073
+- Update to 0.4.1-r829.
+
+* Mon May 16 2011 Lev Givon <lev@mandriva.org> 0.4.0-0.r759
++ Revision: 675134
+- Update to 0.4.0.
+
+* Mon Apr 18 2011 Funda Wang <fwang@mandriva.org> 0.2.3-3
++ Revision: 655748
+- rebuild for new hunspell
+
+* Wed Dec 08 2010 Oden Eriksson <oeriksson@mandriva.com> 0.2.3-2mdv2011.0
++ Revision: 615172
+- the mass rebuild of 2010.1 packages
+
+* Thu Dec 10 2009 Lev Givon <lev@mandriva.org> 0.2.3-1mdv2010.1
++ Revision: 475990
+- import texworks
+
