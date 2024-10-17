@@ -11,7 +11,7 @@ Source0:	%{name}-%{version}-%{rel}.tar.gz
 Source1:	TeXworks.pro
 License:	GPLv2
 Group:		Publishing
-Url:		http://texworks.googlecode.com/
+Url:		https://texworks.googlecode.com/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	qt4-devel >= 4.5.2
 BuildRequires:  libpoppler-devel >= 0.16, libpoppler-qt4-devel >= 0.16
