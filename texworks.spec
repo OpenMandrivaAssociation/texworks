@@ -13,6 +13,7 @@ License:	GPLv2
 Group:		Publishing
 Url:		https://texworks.googlecode.com/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	make
 BuildRequires:	qt4-devel >= 4.5.2
 BuildRequires:  libpoppler-devel >= 0.16, libpoppler-qt4-devel >= 0.16
 BuildRequires:	hunspell-devel >= 1.2.8, dbus-devel
